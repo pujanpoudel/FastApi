@@ -15,3 +15,7 @@ def get_posts():
 def create_posts(payload: dict = Body(...)):
     print(payload)
     return{"message":"successfully created post"}
+
+@app.get("/user")
+def user():
+    return {'data': 'user page'}
